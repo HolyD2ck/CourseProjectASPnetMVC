@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CourseProjectBlazor.Models.Employer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="t">Работодатели</h1>
+
+<p>
+    <a asp-action="Create">Создать Работодателя</a>
+</p>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Фамилия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Имя)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Отчество)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Организация)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Дата_Основания)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Вакансия)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Телефон)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Фото)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Фамилия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Имя)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Отчество)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Организация)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Дата_Основания)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Вакансия)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Телефон)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+                <td>
+                    <img class="db" src="@Url.Content("~/"+item.Фото)" alt="Фото работодателя" />
+                </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Детали</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Удалить</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

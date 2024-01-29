@@ -1,0 +1,73 @@
+﻿@model CourseProjectBlazor.Models.Employer
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Employer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Фамилия" class="control-label"></label>
+                <input asp-for="Фамилия" class="form-control" />
+                <span asp-validation-for="Фамилия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Имя" class="control-label"></label>
+                <input asp-for="Имя" class="form-control" />
+                <span asp-validation-for="Имя" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Отчество" class="control-label"></label>
+                <input asp-for="Отчество" class="form-control" />
+                <span asp-validation-for="Отчество" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Организация" class="control-label"></label>
+                <input asp-for="Организация" class="form-control" />
+                <span asp-validation-for="Организация" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Дата_Основания" class="control-label"></label>
+                <input asp-for="Дата_Основания" class="form-control" />
+                <span asp-validation-for="Дата_Основания" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Вакансия" class="control-label"></label>
+                <input asp-for="Вакансия" class="form-control" />
+                <span asp-validation-for="Вакансия" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Телефон" class="control-label"></label>
+                <input asp-for="Телефон" class="form-control" />
+                <span asp-validation-for="Телефон" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Фото" class="control-label"></label>
+                <input asp-for="Фото" type="file" class="form-control" />
+                <span asp-validation-for="Фото" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

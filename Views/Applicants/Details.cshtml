@@ -1,0 +1,72 @@
+﻿@model CourseProjectBlazor.Models.Applicant
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Applicant</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Фамилия)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Фамилия)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Имя)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Имя)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Отчество)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Отчество)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Образование)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Образование)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Специальность)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Специальность)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Дата_Рождения)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Дата_Рождения)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Телефон)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Телефон)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Фото)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Фото)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
