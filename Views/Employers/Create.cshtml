@@ -4,9 +4,9 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1 class="t">Внести</h1>
 
-<h4>Employer</h4>
+<h4>Работодатель</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -57,15 +57,16 @@
                 <input asp-for="Фото" type="file" class="form-control" />
                 <span asp-validation-for="Фото" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Внести" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">Вернуться к просмотру</a>
 </div>
 
 @section Scripts {

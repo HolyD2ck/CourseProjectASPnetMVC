@@ -123,6 +123,11 @@ namespace CourseProjectASPnetMVC.Controllers
             {
                 try
                 {
+                    var photo = Request.Form.Files.Count > 0 ? Request.Form.Files[0] : null;
+                    string UniqueFileName = UploadedFile(applicant, photo);
+                    applicant.Фото = UniqueFileName;
+                    _context.Attach(applicant);
+                    _context.Entry(applicant).State = EntityState.Added;
                     _context.Update(applicant);
                     await _context.SaveChangesAsync();
                 }
